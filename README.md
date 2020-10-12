@@ -103,7 +103,11 @@ We recommend Glitch or any other web based solution for hosting, that's powered 
 
 ## Footnotes
 
-<a name="myfootnote1">1</a>: See chapter on binding properties to template properties: https://lit-element.polymer-project.org/guide/templates#bind-properties-to-templated-elements
+<a name="myfootnote1">1</a>: See chapter on binding properties to template properties:
+https://lit-element.polymer-project.org/guide/templates#bind-properties-to-templated-elements
+
+<a name="myfootnote2">2</a>: See chapter on binding properties to template properties:
+https://lit-element.polymer-project.org/guide/templates#bind-properties-to-templated-elements
 
 
 
