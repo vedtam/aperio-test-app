@@ -13,7 +13,7 @@ A simple, single page application, that will implement the core technologies of 
 - `<blog-entry>`
 
 ### Blog App
-The main element will be embedded directly into `index.html`. Pseudo code:
+The main element: `<blog-app>`, will be embedded directly into the landing page: `index.html`. Pseudo code:
 
 ```
 <!-- index.html -->
@@ -22,7 +22,7 @@ The main element will be embedded directly into `index.html`. Pseudo code:
 <script type="module" src="src/dist/blog-app.js">
 
 ```
-This custom element will host and showcase a list of 20 cards (`<blog-card>`). Cards will use the same, reusable custom element (extending LitElement), showcasing a title and date - data is passed via a property from the host (blog-app) to the card element and sit inside a loop:
+This custom element will host and showcase a list of 20 card widgets (`<blog-card>`). Cards will use the same reusable custom element (extending LitElement), showcasing a title and date - data is passed via a property from the parent to the card and rendered using a loop:
 
 ```
 //blog-app.js
@@ -79,17 +79,17 @@ stateChanged(state) {
 ## DEPENDENCIES:
 
 • Lit-Element
-	- Web Components base class for creating and rendering into the Shadow DOM of our Custom Elements
+	- Web Components base class for creating and rendering into the Shadow DOM of our own Custom Elements
 
 • Typescript
-	- For typing in element methods and compiling Javascript to the latest spec
+	- For typing element methods and compiling Javascript to the latest spec when its the case
 
-• Redux (optional)
-	- For storing and accessing mock data for the list of cards and the eindividual blog entry element (page)
+• Redux
+	- For storing and accessing mock data for the list of cards and the eindividual blog entry element
 
 • Pwa-helpers
 	- `router.js` for handling navigation between pages
-	- `connect-mixin.js` (optional) for connecting our Custom Element to the Redux store
+	- `connect-mixin.js` for connecting our Custom Element to the Redux store
 
 • Snowpack
 	- Bundling project dependencies only! Ie: LitElement, Redux.
