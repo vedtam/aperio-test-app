@@ -44,6 +44,7 @@ render() {
 stateChanged(state) {
     this.items = state.items;
 }
+...
 ```
 
 When clicking a card, the user should be brought to the actual blog entry element, showcasing the title, date and the full bodytext of the blog post:
@@ -69,6 +70,8 @@ stateChanged(state) {
     this.blogEntry = state.items[3];
 }
 
+...
+
 ```
 
 -----------------
@@ -92,7 +95,7 @@ stateChanged(state) {
 	- Bundling project dependencies only! Ie: LitElement, Redux.
 
 
-----------------------------
+-----------------
 
 ## HOSTING:
 
