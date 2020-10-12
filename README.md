@@ -22,7 +22,7 @@ The main element will be embedded directly into `index.html`. Pseudo code:
 <script type="module" src="src/dist/blog-app.js">
 
 ```
-This custom element will host and showcase a list of 20 cards (`<blog-card>`):
+This custom element will host and showcase a list of 20 cards (`<blog-card>`). Cards will use the same, reusable custom element (extending LitElement), showcasing a title and date - data is passed via a property from the host (blog-app) to the card element and sit inside a loop:
 
 ```
 //blog-app.js
@@ -33,26 +33,23 @@ This custom element will host and showcase a list of 20 cards (`<blog-card>`):
 items: any[] = [];
 
 render() {
-	return html`
-		${this.items.map((item) => html`
-			<a href="/full-blog-entry/3">
-				<blog-card .data="${item}"></blog-card>
-			</a>
-
-	`)}
+   return html`
+     ${this.items.map((item, idx) => html`
+	<a href="/blog-entry/${idx}">
+	  <blog-card .data="${item}"></blog-card>
+	</a>
+    `)}
 }
 
 stateChanged(state) {
     this.items = state.items;
 }
+```
 
-### Blog Card
-The cards will use the same, reusable custom element (extending LitElement), showcasing a title and date - data passed via a property from the host (blog-app) to the card element and sit inside a loop.
-
-When clicking a card, the user should be brought to the actual blog entry element: `full-blog-entry`, showing the title, date and bodytext of the post:
+When clicking a card, the user should be brought to the actual blog entry element, showcasing the title, date and the full bodytext of the blog post:
 
 ```
-//full-blog-entry.js
+//blog-entry.js
 
 ...
 
@@ -60,13 +57,12 @@ When clicking a card, the user should be brought to the actual blog entry elemen
 blogEntry?: any;
 
 render() {
-	return html`
-		<h2>${this.blogEntry?.title}</2>
-		<h5>${this.blogEntry?.date}</5>
+  return html`
+    <h2>${this.blogEntry?.title}</2>
+	<h5>${this.blogEntry?.date}</5>
 
-		<main>${this.blogEntry?.bodytext}</main>
-
-	`)}
+	<main>${this.blogEntry?.bodytext}</main>
+   `)}
 }
 
 stateChanged(state) {
@@ -75,9 +71,9 @@ stateChanged(state) {
 
 ```
 
+-----------------
 
-DEPENDENCIES:
-----------------------------
+## DEPENDENCIES:
 
 • Lit-Element
 	- Web Components base class for creating and rendering into the Shadow DOM of our Custom Elements
@@ -96,9 +92,9 @@ DEPENDENCIES:
 	- Bundling project dependencies only! Ie: LitElement, Redux.
 
 
-
-HOSTING:
 ----------------------------
+
+## HOSTING:
 
 We recommend Glitch or any other web based solution for hosting, that's powered by a Node.js and capable of serving this single page application.
 
