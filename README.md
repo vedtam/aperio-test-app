@@ -28,7 +28,7 @@ This element will host and showcase a list of 20 cards (`<blog-card>`). A card i
 
 Data is hold in the Redux store and accessed by the main element using the callback: `stateChanged()` (see PWA-helpers and the `connect-mixin.js` mixin in dependencies).
 
-This data is then passed via a property<sup>[1](#myfootnote1)</sup> from the parent to the card, and rendered using a loop:
+This data is then passed via a property<sup>[1](#myfootnote1)</sup> from the parent to the card, and rendered<sup>[2](#myfootnote2)</sup> using a loop:
 
 ```
 //blog-app.js
@@ -117,8 +117,8 @@ We recommend Glitch or any other web based solution for hosting, that's powered 
 <a name="myfootnote1">1</a>: See chapter on binding properties to template properties:<br>
 https://lit-element.polymer-project.org/guide/templates#bind-properties-to-templated-elements
 
-<a name="myfootnote2">2</a>: See chapter on binding properties to template properties:
-https://lit-element.polymer-project.org/guide/templates#bind-properties-to-templated-elements
+<a name="myfootnote1">1</a>: See chapter defining and rendering templates using LitElement:<br>
+https://lit-element.polymer-project.org/guide/templates#define-and-render-a-template
 
 
 
