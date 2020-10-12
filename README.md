@@ -12,7 +12,7 @@ A simple, single page application, that will implement the core technologies of 
 - `<blog-card>`
 - `<blog-entry>`
 
-All of these components will extend <a href="https://lit-element.polymer-project.org/">LitElement</a> - a simple base class for creating fast, lightweight web components.
+All of these components will extend <a href="https://lit-element.polymer-project.org/" target="_blank">LitElement</a> - a simple base class for creating fast, lightweight web components.
 
 ### Blog App
 The main element: `<blog-app>`, will be embedded directly into the landing page: `index.html`. Pseudo code:
@@ -95,14 +95,14 @@ stateChanged(state) {
 • Typescript
 	- For typing element methods and compiling Javascript to the latest spec when its the case
 
-• Redux
+• <a href="https://www.npmjs.com/package/redux" target="_blank">Redux</a>
 	- For storing and accessing mock data for the list of cards and the eindividual blog entry element
 
-• Pwa-helpers
+• <a href="https://github.com/Polymer/pwa-helpers" target="_blank">Pwa-helpers</a>
 	- `router.js` for handling navigation between pages
 	- `connect-mixin.js` for connecting our Custom Element to the Redux store
 
-• Snowpack
+• <a href="https://www.snowpack.dev/" target="_blank">Snowpack</a>
 	- Bundling project dependencies only! Ie: LitElement, Redux.
 
 
