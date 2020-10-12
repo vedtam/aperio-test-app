@@ -89,7 +89,7 @@ stateChanged(state) {
 
 ## DEPENDENCIES:
 
-• Lit-Element
+• <a href="https://lit-element.polymer-project.org/" target="_blank">Lit-Element</a>
 	- Web Components base class for creating and rendering into the Shadow DOM of our own Custom Elements
 
 • Typescript
