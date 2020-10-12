@@ -117,7 +117,7 @@ We recommend Glitch or any other web based solution for hosting, that's powered 
 <a name="myfootnote1">1</a>: See chapter on binding properties to template properties:<br>
 https://lit-element.polymer-project.org/guide/templates#bind-properties-to-templated-elements
 
-<a name="myfootnote1">1</a>: See chapter defining and rendering templates using LitElement:<br>
+<a name="myfootnote2">2</a>: See chapter defining and rendering templates using LitElement:<br>
 https://lit-element.polymer-project.org/guide/templates#define-and-render-a-template
 
 
