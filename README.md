@@ -22,7 +22,7 @@ The main element: `<blog-app>`, will be embedded directly into the landing page:
 <script type="module" src="src/dist/blog-app.js">
 
 ```
-This custom element will host and showcase a list of 20 card widgets (`<blog-card>`). Cards will use the same reusable custom element (extending LitElement), showcasing a title and date - data is passed via a property <sup>[1](#myfootnote1)</sup> from the parent to the card and rendered using a loop:
+This custom element will host and showcase a list of 20 card widgets (`<blog-card>`). Cards will use the same reusable custom element (extending LitElement), showcasing a title and date - data is passed via a property<sup>[1](#myfootnote1)</sup> from the parent to the card and rendered using a loop:
 
 ```
 //blog-app.js
@@ -103,7 +103,7 @@ We recommend Glitch or any other web based solution for hosting, that's powered 
 
 ## Footnotes
 
-<a name="myfootnote1">1</a>: Footnote content goes here
+<a name="myfootnote1">1</a>: See chapter on binding properties to template properties: https://lit-element.polymer-project.org/guide/templates#bind-properties-to-templated-elements
 
 
 
