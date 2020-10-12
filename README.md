@@ -22,7 +22,10 @@ The main element: `<blog-app>`, will be embedded directly into the landing page:
 <script type="module" src="src/dist/blog-app.js">
 
 ```
-This custom element will host and showcase a list of 20 card widgets (`<blog-card>`). Cards will use the same reusable custom element (extending LitElement), showcasing a title and date - data is passed via a property<sup>[1](#myfootnote1)</sup> from the parent to the card and rendered using a loop:
+This custom element will host and showcase a list of 20 card widgets (`<blog-card>`). Cards will use the same reusable custom element (extending LitElement), showcasing a title and the date.
+
+Data will be serverd from the Redux store and accessed using the callback: `stateChanged()` of the `connect-mixin.js`- a PWA helper (see dependencies).
+This data is passed than via a property<sup>[1](#myfootnote1)</sup> from the parent to the card, and rendered using a loop:
 
 ```
 //blog-app.js
@@ -47,7 +50,7 @@ stateChanged(state) {
 ...
 ```
 
-When clicking a card, the user should be brought to the actual blog entry element, showcasing the title, date and the full bodytext of the blog post:
+When clicking a card, the user should be brought to the actual blog entry element, showcasing the title, date and the full bodytext of the blog post. 
 
 ```
 //blog-entry.js
@@ -67,7 +70,12 @@ render() {
 }
 
 stateChanged(state) {
-    this.blogEntry = state.items[3];
+    //Hint: We can obtain the idx of the current blog post from the url like:
+    const path = decodeURIComponent(location.pathname);
+    const splitPath = (path || '').slice(1).split('/');
+  
+    const idxOfBlogPost = splitPath[0];
+    this.blogEntry = state.items[idxOfBlogPost];
 }
 
 ...
