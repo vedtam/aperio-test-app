@@ -12,7 +12,7 @@ A simple, single page application, that will implement the core technologies of 
 - `<blog-card>`
 - `<blog-entry>`
 
-All of these components will extend LitElement - a simple base class for creating fast, lightweight web components.
+All of these components will extend <a href="https://lit-element.polymer-project.org/">LitElement</a> - a simple base class for creating fast, lightweight web components.
 
 ### Blog App
 The main element: `<blog-app>`, will be embedded directly into the landing page: `index.html`. Pseudo code:
